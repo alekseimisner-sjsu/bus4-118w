@@ -19,3 +19,4 @@ ways to work on your files and upload your updates:
     d. add your files or edit your existing files in the directory where the repo was cloned
     e. in GitHub Desktop, your changes will be shown. Enter a summary and click "commit to main"
     f. If there is no error, click the "Push to origin" button
+    g. Before starting a new editing session, you probably should pull down the latest changes by click the "Fetch origin" button at the top of the screen and then clicking on "Pull from origin" if updates need to be downloaded. You can then work on your files and upload them by repeated steps d-f.
