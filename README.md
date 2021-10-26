@@ -12,7 +12,10 @@ ways to work on your files and upload your updates:
     f. continue to work on your files
     g. when ready to update the file in github, click on the file name, click the edit icon (pencil icon) and copy/paste your complete file over the code that is in that edit window
 
-1. use GitHub Desktop
+2. use GitHub Desktop
     a. download GitHub Desktop from the github site
     b. launch the application and log into your github account in the location prompted
     c. select our repo and clone it to your computer
+    d. add your files or edit your existing files in the directory where the repo was cloned
+    e. in GitHub Desktop, your changes will be shown. Enter a summary and click "commit to main"
+    f. If there is no error, click the "Push to origin" button
