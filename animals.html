@@ -8,6 +8,11 @@
     <style>
         table {
             border-spacing: 0 2px;
+            width: 30%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1abc9c;
         }
 
         tr:nth-child(odd) {
@@ -15,99 +20,216 @@
         }
 
         th {
-            font:48px Verdana;
+            font:18px Verdana;
             font-weighs: bold;
             background-color: #bbb;
         }
 
         td {
-            font:36px Verdana;
+            font:14px Verdana;
+            font-weighs: bold;
         }
 
         table, th, td {
             padding: 5px;
             text-align: center;
         }
+
+        // images should scale down when needed, but never
+        // scale up beyond their original size
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* Style the header */
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+    }
+
+    /* Increase the font size of the h1 element */
+    .header h1 {
+      font-size: 40px;
+    }
+
+    /* Style the top navigation bar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Style the navigation bar links */
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Right-aligned link */
+    .navbar a.right {
+      float: right;
+    }
+
+    /* Change color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Column container */
+    .row {  
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 40%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    /* Main column */
+    .main {   
+      flex: 60%;
+      background-color: white;
+      padding: 20px;
+    }
+
+    /* Fake image, just for this example */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+    }
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      .row {   
+        flex-direction: column;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .navbar a {
+        float: none;
+        width:100%;
+      }
+    }
     </style>
 
-    <link rel="stylesheet" href = "StyleHome.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>
 <body>
-    <div class ="navbar">
-        <a href = "#" class="logo">FHFIP</a>
-        <ul class = "nav">
-                <li><a href = "home2.html">Home</a></li>
-                <li><a href = "about2.html">About</a></li>
-                <li><a href = #>Animals</a></li>
-                <li><a href = #>Adoption Fees</a></li>
-                <li><a href = #>Volunteer</a></li>
-                <li><a href = #>FAQ</a></li>
-                <li><a href = #>Donate</a></li>
-                <li><a href = #>Lost and Found</a></li>
-        </ul>
-    </div>
-    <div class = "banner-area" id="home">
+
+    <div class="header" id="animals">
         <div class = "text-part">
-            <h1>Imaginary Foster Homes For Animals</h1>
+            <h1>Imaginary Foster Homes For Pets</h1>
             <h3>Animals Available for Adoption</h3>
-
-            <input type="button" onclick="DisplayAnimals()" value="Show Animals" />
-            <p id="showAnimals"></p>
-            <script type="text/javascript" src="js/animals.js"></script>
-            <script>
-                function DisplayAnimals() {
-                    var myAnimals=getAnimals();
-                    var col = [];
-                    for (var i = 0; i < myAnimals.length; i++) {
-                      for (var key in myAnimals[i]) {
-                        if (col.indexOf(key) === -1 ) {
-                          col.push(key);
-                        }
-                      }
-                    }
-
-                    var table = document.createElement("table");
-
-                    var tr = table.insertRow(-1);
-
-                    // the header for the animal table
-                    var th = document.createElement("th");
-                    th.innerHTML = 'Image';
-                    tr.appendChild(th);
-
-                    for (var i = 0;i < col.length;i++) {
-                      var th = document.createElement("th");
-                      th.innerHTML = col[i];
-                      tr.appendChild(th);
-                    }
-
-                    // the rows of JSON data about the animals
-                    for (var i = 0;i < myAnimals.length;i++) {
-                      tr = table.insertRow(-1);
-
-                      //the image for the animal
-                      var myImgName = 'img/' + JSON.stringify(myAnimals[i]['ID']) + '.jpg';
-                      myImgName = myImgName.replace(/["]+/g, '');
-                      var img = document.createElement('img');
-                      img.src = myImgName;
-                      img.setAttribute('style', 'border: solid 2px #000;');
-                      var tabCell = tr.insertCell(-1);
-                      tabCell.appendChild(img);
-
-                      for (var j = 0;j < col.length;j++) {
-                        var tabCell = tr.insertCell(-1);
-                        tabCell.innerHTML = myAnimals[i][col[j]];
-                      }
-                    }
-
-                    // add the table
-                    var divContainer = document.getElementById("showAnimals");
-                    divContainer.innerHTML = "";
-                    divContainer.appendChild(table);
-                }
-            </script>	
-
         </div>
     </div>
+
+    <div id="nav-placeholder"></div>
+
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+    <div class="row">
+      <div class="side">
+        <h2>Search for Pets</h2>
+        <input type="button" onclick="DisplayAnimals()" value="Show Animals" />
+
+        <div id="showAnimals"></div>
+
+        <script type="text/javascript" src="js/animals.js"></script>
+        <script>
+        function DisplayAnimals() {
+            var myAnimals=getAnimals();
+            var col = [];
+            for (var i = 0; i < myAnimals.length; i++) {
+              for (var key in myAnimals[i]) {
+                if (col.indexOf(key) === -1 ) {
+                  col.push(key);
+                }
+              }
+            }
+
+            var table = document.createElement("table");
+
+            var tr = table.insertRow(-1);
+
+            // the header for the animal table
+            var th = document.createElement("th");
+            th.innerHTML = 'Image';
+            tr.appendChild(th);
+
+            for (var i = 0;i < col.length;i++) {
+              var th = document.createElement("th");
+              th.innerHTML = col[i];
+              tr.appendChild(th);
+            }
+
+            // the rows of JSON data about the animals
+            for (var i = 0;i < myAnimals.length;i++) {
+              tr = table.insertRow(-1);
+
+              //the image for the animal
+              var myImgName = 'img/' + JSON.stringify(myAnimals[i]['ID']) + '.jpg';
+              myImgName = myImgName.replace(/["]+/g, '');
+              var img = document.createElement('img');
+              img.src = myImgName;
+              img.setAttribute('style', 'border: solid 2px #000;');
+              var tabCell = tr.insertCell(-1);
+              tabCell.appendChild(img);
+
+              for (var j = 0;j < col.length;j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = myAnimals[i][col[j]];
+              }
+            }
+
+            // add the table
+            var divContainer = document.getElementById("showAnimals");
+            divContainer.innerHTML = "";
+            divContainer.appendChild(table);
+        }
+        </script>	
+      </div>
+      <div class="main">
+        <h2>Details</h2>
+      </div>
+    </div>
+
+<div class="footer">
+  <h2>footer</h2>
+</div>
+
 </body>
 </html>
