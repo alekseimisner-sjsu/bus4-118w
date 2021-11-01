@@ -15,7 +15,7 @@ body {
 }
 
 /* Style the header */
-.header {
+/*.header {
   padding: 80px;
   text-align: center;
   background: #1abc9c;
@@ -33,14 +33,60 @@ body {
   background-color: #333;
 }
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+.navbar{
+    float: right;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #d4d7de;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+.nav{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    color:#000 blac;
+    text-decoration: none;
+    padding:5px 10px;
+    font-size: 20px;
+}
+.nav li a:hover{
+    background:rgb(255, 255, 255);
+    color: rgb(17, 6, 6);
+}
+.logo{
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: cursive;
+}
+a{
+    margin: 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover{
+    color: #000; 
 }
 
 /* Right-aligned link */
@@ -112,13 +158,26 @@ body {
   <p>This webpage has information for individuals who are excited to volunteer with our organization and help our pets/companions :)</p>
 </div>
 
-<div class="navbar">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
-</div>
-
+<style>
+  .myNavLinks {
+      text-align: right;
+  }
+  </style>
+  
+  <div class ="navbar">
+      <div class="myLogo">
+          <a href = "#" class="logo">FHFIP</a>
+      </div>
+  
+      <div class="myNavLinks">
+          <a href = "HOMETEST.html">Home</a>
+          <a href = "about2.html">About</a>
+          <a href = "animals.html">Animals</a>
+          <a href = "volunteer.html">Volunteer</a>
+          <a href = "faqs.html">FAQ</a>
+          <a href = "LostandFound.html">Lost and Found</a>
+      </div>
+  </div>
 <div class="row">
   <div class="side">
     <h2>Photos of volunteers!</h2>
