@@ -153,6 +153,7 @@ a:hover{
   }
 }
 </style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
   <style>
@@ -160,7 +161,8 @@ a:hover{
         text-align: right;
     }
     </style>
-    
+ 
+    <!--   
     <div class ="navbar">
       <a href = "#" class="logo">FHFIP</a>
       <ul class = "nav">
@@ -172,7 +174,15 @@ a:hover{
               <li><a href = "LostandFound.html">Lost and Found</a></li>
       </ul>
     </div>
+    -->
 
+  <div id="nav-placeholder"></div>
+
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("nav2.html");
+    });
+  </script>
 <div class="header">
   <h1>Frequently Asked Questions (FAQs):</h1>
   <p>This webpage is for common FAQs about our adoption services!</p>

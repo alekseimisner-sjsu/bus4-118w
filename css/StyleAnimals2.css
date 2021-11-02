@@ -4,9 +4,8 @@
 }
 
 body {
-  font-family: Poppins;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
 /* Style the header */
@@ -17,6 +16,11 @@ body {
   color: white;
 }
 
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
@@ -25,8 +29,7 @@ body {
 
 .nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
     list-style: none;
     margin-right: 15%;
 }

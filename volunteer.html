@@ -146,6 +146,7 @@ a:hover{
   }
 }
 </style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
 
@@ -154,7 +155,7 @@ a:hover{
       text-align: right;
   }
   </style> -->
-  
+  <!-- 
   <div class ="navbar">
     <a href = "#" class="logo">FHFIP</a>
     <ul class = "nav">
@@ -165,7 +166,16 @@ a:hover{
             <li><a href = "faqs.html">FAQ</a></li>
             <li><a href = "LostandFound.html">Lost and Found</a></li>
     </ul>
-</div>
+  </div>
+  -->
+
+  <div id="nav-placeholder"></div>
+
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("nav2.html");
+    });
+  </script>
   <!-- <div class="header">
     <h1>Volunteer with us!</h1>
     <p>This webpage has information for individuals who are excited to volunteer with our organization and help our pets/companions :)</p>

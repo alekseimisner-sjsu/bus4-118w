@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost and Found</title>
     <link rel="stylesheet" href = "css/StyleLostandFound.css">
-
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+  <!--
   <div class ="navbar">
     <a href = "#" class="logo">FHFIP</a>
     <ul class = "nav">
@@ -20,6 +21,15 @@
       <li><a href = "LostandFound.html">Lost and Found</a></li>
     </ul>
   </div>
+  -->
+
+  <div id="nav-placeholder"></div>
+
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("nav2.html");
+    });
+  </script>
   
   <div class = "banner-area" id="home">
     <div class = "text-part">
