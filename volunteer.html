@@ -16,7 +16,7 @@ body{
 }
 
 /* Style the header */
-/*.header {
+.header {
   padding: 80px;
   text-align: center;
   background: #1abc9c;
@@ -149,26 +149,6 @@ a:hover{
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-
-<!-- <style>
-  .myNavLinks {
-      text-align: right;
-  }
-  </style> -->
-  <!-- 
-  <div class ="navbar">
-    <a href = "#" class="logo">FHFIP</a>
-    <ul class = "nav">
-            <li><a href = "HOMETEST.html">Home</a></li>
-            <li><a href = "about2.html">About</a></li>
-            <li><a href = "animals.html">Animals</a></li>
-            <li><a href = "volunteer.html">Volunteer</a></li>
-            <li><a href = "faqs.html">FAQ</a></li>
-            <li><a href = "LostandFound.html">Lost and Found</a></li>
-    </ul>
-  </div>
-  -->
-
   <div id="nav-placeholder"></div>
 
   <script>
@@ -176,10 +156,14 @@ a:hover{
       $("#nav-placeholder").load("nav2.html");
     });
   </script>
-  <!-- <div class="header">
-    <h1>Volunteer with us!</h1>
-    <p>This webpage has information for individuals who are excited to volunteer with our organization and help our pets/companions :)</p>
-  </div> -->
+
+  <div class="header" id='volunteer'>
+    <div class = "text-part">
+      <h1>Volunteer with us!</h1>
+      <p>This webpage has information for individuals who are excited to volunteer with our organization and help our pets/companions :)</p>
+    </div>
+  </div>
+
 <div class="row">
   <div class="side">
     <h2>Photos of volunteers!</h2>
