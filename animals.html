@@ -42,10 +42,20 @@
             height: auto;
         }
 
-    * {
-      box-sizing: border-box;
-    }
+        * {
+          box-sizing: border-box;
+        }
 
+        fieldset {
+          background: #1abc9c;
+          border: 5px solid gray;
+        }
+
+        legend {
+          padding: 10px;
+          background: gray;
+          color: #1abc9c;
+        }
     </style>
 
 </head>
@@ -72,12 +82,40 @@
     <div class="row">
       <div class="side">
         <h2>Search for Pets</h2>
-        <input type="button" onclick="DisplayAnimals()" value="Show Animals" />
+
+  <form>
+  <fieldset>
+    <legend>Animals to display</legend>
+    <div>
+      <input type="checkbox" id="cats" name="animalsToDisplay" value="cats" checked>
+      <label for="cats">Cats</label>
+    </div>
+    <div>
+      <input type="checkbox" id="dogs" name="animalsToDisplay" value="dogs" checked>
+      <label for="dogs">Dogs</label>
+    </div>
+    <div>
+      <input type="checkbox" id="other" name="animalsToDisplay" value="other" checked>
+      <label for="other">Other</label>
+    </div>
+    <div>
+      <input type="button" onclick="DisplayAnimals()" value="Show Animals">
+    </div>
+  </fieldset>
+  </form>
 
 
         <script type="text/javascript" src="js/animals.js"></script>
         <script>
         function DisplayAnimals() {
+
+
+        var catsCheckbox = document.querySelector('input[value="cats"]');
+        var dogsCheckbox = document.querySelector('input[value="dogs"]');
+        var otherCheckbox = document.querySelector('input[value="other"]');
+
+
+
             var myAnimals=getAnimals();
             var col = [];
             for (var i = 0; i < myAnimals.length; i++) {
@@ -105,6 +143,21 @@
 
             // the rows of JSON data about the animals
             for (var i = 0;i < myAnimals.length;i++) {
+              if( myAnimals[i]['Type'].toLowerCase() == 'cat' ) { 
+                if(! catsCheckbox.checked) {
+                  continue;
+                }
+              }
+              else if( myAnimals[i]['Type'].toLowerCase() == 'dog' ) { 
+                if(! dogsCheckbox.checked) {
+                  continue;
+                }
+              }
+              else {
+                if(! otherCheckbox.checked) { 
+                  continue;
+                }
+              }
               tr = table.insertRow(-1);
 
               //the image for the animal
