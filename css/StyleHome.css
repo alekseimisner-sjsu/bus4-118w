@@ -55,7 +55,7 @@ a:hover{
 }
 .banner-area{
     position: relative;
-    background-image: url;
+    background-image: url();
     text-align: center;
     width: 100%;
     height: 97vh;
