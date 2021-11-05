@@ -55,6 +55,10 @@ a:hover{
 }
 .about-area{
     position: relative;
+    background-image: url(about\ us\ background\ photo.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     align-items: center;
