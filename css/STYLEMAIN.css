@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: Poppins;
 }
+/* navbar */
 .navbar{
     float: right;
     position: fixed;
@@ -53,7 +54,9 @@ a{
 a:hover{
     color: #000; 
 }
-.banner-area{
+/* end of navbar */
+/* Start of homepage css */
+.homebanner-area{
     position: relative;
     background-image: url(pet\ adoption\ homepage.jpg);
     text-align: center;
@@ -64,7 +67,7 @@ a:hover{
     background-size: cover;
 }
 
-.text-part{
+.hometext-part{
     position:fixed;
     width: 100%;
     height: 100%;
@@ -107,7 +110,8 @@ ul li{
 .btn:active{
     background:lightskyblue;
 }
-/* About CSS */
+/* end of homepage css */
+/* Start About CSS */
 .about-area{
     position: relative;
     background-image: url(about\ us\ background\ photo.jpg);
@@ -122,9 +126,10 @@ ul li{
     width: 100%;
     height: 700px;
 }
-.text-part{
+.abouttext-part{
     width: 65%;
     height: 80%;
+    text-align: center;
 }   
 ul li{
     font-size:25px;
@@ -132,11 +137,11 @@ ul li{
     text-align: center;
     list-style-position: inside;
 }
-.text-part{
+.abouttext-part{
     font-size:50px;
     font-family:sans-serif;
 }
-.container {
+.containerabout {
     display:flex;
     align-items: center;
     justify-content: center;
@@ -161,3 +166,4 @@ ul li{
     transition: all 0.9s ease 0s;
     
 }
+/* end of about CSS */
