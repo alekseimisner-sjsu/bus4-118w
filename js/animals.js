@@ -34,6 +34,13 @@ var myAnimals = [
         "Type": "horse",
         "Breed": "American Saddlebred",
         "Gender": "male"
+    },
+    {
+        "ID": "6",
+        "Name": "Kitty White",
+        "Type": "cat",
+        "Breed": "Japanese Bobtail",
+        "Gender": "female"
     }
 ]
 

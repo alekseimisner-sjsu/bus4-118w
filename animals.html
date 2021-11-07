@@ -56,6 +56,12 @@
           background: gray;
           color: #1abc9c;
         }
+
+        .optionCategory {
+          padding: 5px;
+          border: 1px solid gray;
+          width: 25%;
+        } 
     </style>
 
 </head>
@@ -84,17 +90,33 @@
   <form>
   <fieldset>
     <legend>Animals to display</legend>
-    <div>
-      <input type="checkbox" id="cats" name="animalsToDisplay" value="cats" checked>
-      <label for="cats">Cats</label>
+    <div class="row">
+    <div class="optionCategory">
+      <b>Type</b>
+      <div>
+        <input type="checkbox" id="cats" name="animalsToDisplay" value="cats" checked>
+        <label for="cats">Cats</label>
+      </div>
+      <div>
+        <input type="checkbox" id="dogs" name="animalsToDisplay" value="dogs" checked>
+        <label for="dogs">Dogs</label>
+      </div>
+      <div>
+        <input type="checkbox" id="other" name="animalsToDisplay" value="other" checked>
+        <label for="other">Other</label>
+      </div>
     </div>
-    <div>
-      <input type="checkbox" id="dogs" name="animalsToDisplay" value="dogs" checked>
-      <label for="dogs">Dogs</label>
+    <div class="optionCategory">
+      <b>Gender</b>
+      <div>
+        <input type="checkbox" id="male" name="animalsToDisplay" value="male" checked>
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="checkbox" id="female" name="animalsToDisplay" value="female" checked>
+        <label for="female">Female</label>
+      </div>
     </div>
-    <div>
-      <input type="checkbox" id="other" name="animalsToDisplay" value="other" checked>
-      <label for="other">Other</label>
     </div>
     <div>
       <input type="button" onclick="DisplayAnimals()" value="Show Animals">
@@ -112,6 +134,8 @@
         var dogsCheckbox = document.querySelector('input[value="dogs"]');
         var otherCheckbox = document.querySelector('input[value="other"]');
 
+        var maleCheckbox = document.querySelector('input[value="male"]');
+        var femaleCheckbox = document.querySelector('input[value="female"]');
 
 
             var myAnimals=getAnimals();
@@ -156,6 +180,18 @@
                   continue;
                 }
               }
+
+              if( myAnimals[i]['Gender'].toLowerCase() == 'male' ) { 
+                if(! maleCheckbox.checked) {
+                  continue;
+                }
+              }
+              else if( myAnimals[i]['Gender'].toLowerCase() == 'female' ) { 
+                if(! femaleCheckbox.checked) {
+                  continue;
+                }
+              }
+
               tr = table.insertRow(-1);
 
               //the image for the animal
