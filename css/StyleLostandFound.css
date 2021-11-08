@@ -53,3 +53,10 @@ a{
 a:hover{
     color: #000; 
 }
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #b28419;
+    padding: 15px;
+}
