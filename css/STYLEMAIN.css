@@ -61,14 +61,14 @@ a:hover{
     background-image: url(pet\ adoption\ homepage.jpg);
     text-align: center;
     width: 100%;
-    height: 97vh;
+    height: 100vh;
     background-repeat: no-repeat;
     -webkit-background-size: cover ;
     background-size: cover;
 }
 
 .hometext-part{
-    position:fixed;
+    position:relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -109,6 +109,46 @@ ul li{
 }
 .btn:active{
     background:lightskyblue;
+}
+.featuredbutton{
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    line-height: 1; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: saddlebrown;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.featuredbutton:hover,
+.featuredbutton:focus{
+    background:darkblue;
+}
+.featuredbutton:active{
+    background:lightskyblue;
+}
+.our-animal{
+    background: darkgray;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 0 20px;
+    margin: 0px 10px;
+    width: 30%;
+}
+.our-animal .pic img{
+    width:50%;
+    height:auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
 }
 /* end of homepage css */
 /* Start About CSS */
