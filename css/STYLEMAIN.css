@@ -207,3 +207,26 @@ ul li{
     
 }
 /* end of about CSS */
+
+/* Start of Lost and Found CSS */
+.center {
+    margin: auto;
+    width: 70%;
+    border: 3px solid #b28419;
+    padding: 15px;
+}
+
+h2{
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.lostandfound-area{
+    background-image: url(background\for\lost\and\found.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* End of Lost and Found CSS */
