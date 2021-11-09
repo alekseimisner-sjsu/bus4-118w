@@ -211,18 +211,17 @@ ul li{
 /* Start of Lost and Found CSS */
 .center {
     margin: auto;
-    width: 60%;
+    width: 70%;
     border: 3px solid #b28419;
     padding: 15px;
+    background-image: url(background\ for\ lost\ and\ found.jpg);
 }
 
-ul li{
-    font-size:25px;
+h2{
+    font-size: 25px;
     font-family: cursive;
-    text-align: center;
-    list-style-position: inside;
 }
 
 .lostandfoundbanner-area {
-    background-image: url(background\ for\ lost\ and\ found.jpg) ;
+    background-image: url(background\ for\ lost\ and\ found.jpg);
 }
