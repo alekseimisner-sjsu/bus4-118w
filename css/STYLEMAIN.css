@@ -215,3 +215,7 @@ ul li{
     border: 3px solid #b28419;
     padding: 15px;
 }
+
+.lostandfoundbanner-area {
+    background-image: url(background\ for\ lost\ and\ found.jpg) ;
+}
