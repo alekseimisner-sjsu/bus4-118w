@@ -80,10 +80,9 @@ a:hover{
     font-family:sans-serif;
 }
 .text-part{
-    width: 65%;
-    height: 80%;
     font-size:50px;
     font-family:sans-serif;
+    text-align: center;
 }
 h1{
     font-size: 50px;
@@ -139,8 +138,8 @@ ul li{
 .header {
   padding: 30px 10px 0px 10px; 
   text-align: center;
-  background: #1abc9c;
-  color: white;
+  color: #f2ded3;
+  background-color: #b74e00;
 }
 
 /* Column container */
