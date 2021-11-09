@@ -216,6 +216,13 @@ ul li{
     padding: 15px;
 }
 
+ul li{
+    font-size:25px;
+    font-family: cursive;
+    text-align: center;
+    list-style-position: inside;
+}
+
 .lostandfoundbanner-area {
     background-image: url(background\ for\ lost\ and\ found.jpg) ;
 }
