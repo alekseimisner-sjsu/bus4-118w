@@ -207,3 +207,11 @@ ul li{
     
 }
 /* end of about CSS */
+
+/* Start of Lost and Found CSS */
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #b28419;
+    padding: 15px;
+}
