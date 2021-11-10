@@ -245,21 +245,7 @@ ul li{
 }
 
 /* Style the header */
-.header {
-  padding: 30px 10px 0px 10px;
-  text-align: center;
-  color: #f2ded3;
-  background-color: #b74e00;
-}
-
-/* Column container */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Style the header */
-.header {
+.animal-header {
   padding: 30px 10px 0px 10px;
   text-align: center;
   color: #f2ded3;
