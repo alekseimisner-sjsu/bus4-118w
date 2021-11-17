@@ -232,6 +232,42 @@ ul li{
     text-align: center;
 }
 
+table {
+    border-spacing: 0 2px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2ded3;
+}
+
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+th {
+    font:18px Verdana;
+    font-weight: bold;
+    color: #f2ded3;
+    background-color: #b74e00;
+}
+
+td {
+    font:14px Verdana;
+    font-weight: bold;
+}
+
+table, th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+/* images should scale down when needed, but never */
+/* scale up beyond their original size */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     display:flex;
     align-items: center;
@@ -242,6 +278,22 @@ ul li{
 
 * {
   box-sizing: border-box;
+}
+
+fieldset {
+  background: #f2ded3;
+  border: 5px solid #b74e00;
+}
+
+legend {
+  padding: 10px;
+  background: #b74e00;
+  color: #f2ded3;
+}
+
+.optionCategory {
+  padding: 5px;
+  width: 25%;
 }
 
 /* Style the header */
