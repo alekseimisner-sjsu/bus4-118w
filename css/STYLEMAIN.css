@@ -344,6 +344,11 @@ h2{
     font-family: cursive;
 }
 
+h4{
+    font-size: 15px;
+    font-family: cursive;
+}
+
 .lostandfound-area {
     background-image: url(background\for\lost\and\found.jpg);
     height: 500px;
