@@ -8,12 +8,20 @@ h1{
     font-size: 50px;
     font-family: cursive;
 }
+h2{
+  font-size: 25px;
+  font-family: cursive;
+}
 h3{
     font-size: 30px;
     font-family: cursive;
 }
+h4{
+  font-size: 15px;
+  font-family: cursive;
+}
 p{
-    font-size: 25px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif; 
 }
 .footer {
@@ -23,7 +31,14 @@ p{
   /* position: absolute; */
   bottom:0;
   width:100%;
-  height:60px;
+  height:85px;
+}
+.header {
+  padding:65px;
+  text-align: center;
+  background: #399ddfab;
+  color: black;
+  height: 250px;
 }
 /* navbar */
 .navbar{
@@ -34,7 +49,7 @@ p{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #d4d7de;
+    background-color: whitesmoke;
     width: 100%;
     height: 70px;
     z-index: 1;
@@ -49,13 +64,13 @@ p{
     display: inline-block;
 }
 .nav li a{
-    color:#000 black;
+    color:#000 lightgray;
     text-decoration: none;
     padding:5px 10px;
     font-size: 20px;
 }
 .nav li a:hover{
-    background:rgb(255, 255, 255);
+    background:#399ddfab;
     color: rgb(17, 6, 6);
 }
 .logo{
@@ -76,6 +91,15 @@ a{
 a:hover{
     color: #000; 
 }
+/* .search{
+  background-color: #4654e1;
+  width:300px;
+  height:44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
 /* end of navbar */
 /* Start of homepage css */
 .homebanner-area{
@@ -179,7 +203,7 @@ ul li{
 }   
 ul li{
     font-size:25px;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     list-style-position: inside;
 }
@@ -290,12 +314,12 @@ legend {
 }
 
 /* Style the header */
-.animal-header {
+/* .animal-header {
   padding: 30px 10px 0px 10px;
   text-align: center;
   color: #f2ded3;
   background-color: #b74e00;
-} */
+} */ 
 
  /* Column container */
 .row {
@@ -341,18 +365,9 @@ legend {
     width: 100%;
     /* border: 3px solid #d67c15; */
     height: 100%;
-    padding: 30px;
+    text-align: center;
 }
 
-h2{
-    font-size: 25px;
-    font-family: cursive;
-}
-
-h4{
-    font-size: 15px;
-    font-family: cursive;
-}
 
 /* .lostandfound-area {
     background-image: url(background\for\lost\and\found.jpg);
@@ -365,7 +380,7 @@ h4{
 .form-page{
   text-align: center;
   border: 3px solid black;
-  background-color:rgb(156, 196, 196)
+  background-color:#399ddfab;
 }
 
 /* End of Lost and Found CSS */
@@ -383,12 +398,12 @@ h4{
 } */
 
 /* Style the header */
-.header {
+/* .header {
     padding: 80px;
     text-align: center;
     background: #1abc9c;
     color: white;
-  }
+  } */
   
   /* Increase the font size of the h1 element */
   /* .header h1 {
@@ -423,6 +438,7 @@ h4{
     background-color: white;
     padding: 20px;
     box-sizing: border-box;
+    text-align: center;
   }
   
   /* Fake image, just for this example */
