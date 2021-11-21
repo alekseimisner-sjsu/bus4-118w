@@ -20,6 +20,10 @@ p{
   padding: 10px;
   text-align: center;
   background: #ddd;
+  /* position: absolute; */
+  bottom:0;
+  width:100%;
+  height:60px;
 }
 /* navbar */
 .navbar{
@@ -166,7 +170,7 @@ ul li{
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 700px;
+    height: 100%;
 }
 .abouttext-part{
     width: 65%;
@@ -291,9 +295,9 @@ legend {
   text-align: center;
   color: #f2ded3;
   background-color: #b74e00;
-}
+} */
 
-/* Column container */
+ /* Column container */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -334,9 +338,10 @@ legend {
 /* Start of Lost and Found CSS */
 .center {
     margin: auto;
-    width: 70%;
-    border: 3px solid #d67c15;
-    padding: 15px;
+    width: 100%;
+    /* border: 3px solid #d67c15; */
+    height: 100%;
+    padding: 30px;
 }
 
 h2{
@@ -349,13 +354,18 @@ h4{
     font-family: cursive;
 }
 
-.lostandfound-area {
+/* .lostandfound-area {
     background-image: url(background\for\lost\and\found.jpg);
-    height: 500px;
+    height: 500px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: relative; 
+} */
+.form-page{
+  text-align: center;
+  border: 3px solid black;
+  background-color:rgb(156, 196, 196)
 }
 
 /* End of Lost and Found CSS */
@@ -423,11 +433,11 @@ h4{
   }
   
   /* Footer */
-  .footer {
+  /* .footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
-  }
+  } */
   
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 700px) {
