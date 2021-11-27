@@ -2,10 +2,10 @@ function getAnimals() {
 var myAnimals = [
     {
         "ID": "1",
-        "Name": "Bill",
-        "Type": "cat",
-        "Breed": "unknown",
-        "Gender": "male"
+        "Name": "Lola",
+        "Type": "hare",
+        "Breed": "hare",
+        "Gender": "female"
     },
     {
         "ID": "2",

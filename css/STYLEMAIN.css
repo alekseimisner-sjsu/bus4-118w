@@ -36,7 +36,7 @@ p{
 .header {
   padding:65px;
   text-align: center;
-  background: #399ddfab;
+  background: #61b1e5;
   color: black;
   height: 250px;
 }
@@ -238,15 +238,16 @@ ul li{
 }
 /* end of about CSS */
 /* Start of Animals CSS */
-.header-text-part{
-    font-size:50px;
-    font-family:sans-serif;
-}
-
 .text-part{
     font-size:50px;
     font-family:sans-serif;
     text-align: center;
+}
+
+.text-part-main{
+    font-size:50px;
+    font-family:sans-serif;
+    text-align: left;
 }
 
 table {
@@ -254,18 +255,20 @@ table {
 }
 
 tr:nth-child(even) {
-    background-color: #f2ded3;
+    background-color: #ddd;
 }
 
 tr:nth-child(odd) {
-    background-color: #ddd;
+    background-color: #c0e0f5;
 }
 
 th {
     font:18px Verdana;
     font-weight: bold;
-    color: #f2ded3;
-    background-color: #b74e00;
+    /*color: #f2ded3;*/
+    color: #000;
+    /*background-color: #b74e00;*/
+    background-color: #61b1e5;
 }
 
 td {
@@ -298,14 +301,17 @@ img {
 }
 
 fieldset {
-  background: #f2ded3;
-  border: 5px solid #b74e00;
+  /*background: #f2ded3;*/
+  background: #c0e0f5;
+  border: 5px solid #61b1e5;
 }
 
 legend {
   padding: 10px;
-  background: #b74e00;
-  color: #f2ded3;
+  /*background: #b74e00;*/
+  background: #61b1e5;
+  /*color: #f2ded3;*/
+  color: #000;
 }
 
 .optionCategory {
@@ -340,6 +346,7 @@ legend {
   flex: 70%;
   background-color: white;
   padding: 20px;
+  text-align: left;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
