@@ -83,13 +83,13 @@
       </fieldset>
       </form>
 
-
       <script type="text/javascript" src="js/animals.js"></script>
       <script>
 
       document.addEventListener("DOMContentLoaded", function() {
         populateSelect();
       });
+
 
       function populateSelect() {
 
@@ -140,6 +140,35 @@
         }
       }
 
+      function adoptAnimal(ID, Name) {
+        var animalID = arguments[0];
+        var animalName = arguments[1];
+
+        var divContainer = document.getElementById("adoptionForm");
+        divContainer.innerHTML = "";
+        divContainer.innerHTML = "<h3>Adopting " + animalName + "</h3>";
+        divContainer.innerHTML += "Thank you for your interest in adopting " + animalName + ".";
+        divContainer.innerHTML += "The adoption fee is $100. Please fill out the form below and we will get back to you regarding the next steps in the adoption process. <b>ALL FIELDS ARE REQUIRED.</b>";
+        divContainer.innerHTML += "<form action='./adoptAnimal.html' method='GET'>" +
+          "<input type='hidden' name='animalID' value='" + animalID + "'>" +
+          "<input type='hidden' name='animalName' value='" + animalName + "'>" +
+          "<h4>First name:</h4>" + 
+          "<input type='text' id='firstname' name='firstname' required>" +
+          "<br>" +
+          "<h4>Last name:</h4>" +
+          "<input type='text' name='lastname' required>" +
+          "<br>" +
+          "<h4>Email:</h4>" +
+          "<input type='text' name='email' required>" +
+          "<br>" +
+          "<h4>Number:</h4>" +
+          "<input type='text' name='phonenumber' required>" +
+          "<br>" +
+          "<input type='submit' value='Submit'>" +
+          "</form>";
+        document.getElementById('firstname').focus();
+      }
+
       function DisplayAnimals() {
         var catsCheckbox = document.querySelector('input[value="cats"]');
         var dogsCheckbox = document.querySelector('input[value="dogs"]');
@@ -161,20 +190,26 @@
           }
         }
 
+        var results = false;
+
         var table = document.createElement("table");
 
         var tr = table.insertRow(-1);
 
         // the header for the animal table
-        var th = document.createElement("th");
-        th.innerHTML = 'Image';
-        tr.appendChild(th);
+        //var th = document.createElement("th");
+        //th.innerHTML = 'Image';
+        //tr.appendChild(th);
 
-        for (var i = 0;i < col.length;i++) {
-          var th = document.createElement("th");
-          th.innerHTML = col[i];
-          tr.appendChild(th);
-        }
+        //var th = document.createElement("th");
+        //th.innerHTML = 'Details';
+        //tr.appendChild(th);
+
+        //for (var i = 0;i < col.length;i++) {
+        //  var th = document.createElement("th");
+        //  th.innerHTML = col[i];
+        //  tr.appendChild(th);
+        //}
 
         // the rows of JSON data about the animals
         for (var i = 0;i < myAnimals.length;i++) {
@@ -212,6 +247,8 @@
             }
           }
 
+          results = true;
+
           tr = table.insertRow(-1);
 
           //the image for the animal
@@ -222,26 +259,39 @@
           img.setAttribute('style', 'border: solid 2px #000;');
           var tabCell = tr.insertCell(-1);
           tabCell.appendChild(img);
+          var ID = myAnimals[i]['ID'];
+          var Name = myAnimals[i]['Name'];
+          var tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = "<h3>" + Name + "</h3>" + myAnimals[i]['Gender'] + "<br>" + myAnimals[i]['Breed'] + " " + myAnimals[i]['Type'] + "<br><br>" + myAnimals[i]['Description'] + "<br><br><input type='button' onclick=\"adoptAnimal('" + ID + "', '" + Name + "')\" value='Adopt " + Name + "'>";
 
-          for (var j = 0;j < col.length;j++) {
-            var tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = myAnimals[i][col[j]];
-          }
+  
+          //for (var j = 0;j < col.length;j++) {
+          //  var tabCell = tr.insertCell(-1);
+          //  tabCell.innerHTML = myAnimals[i][col[j]];
+          //}
               
         }
             
             
         // add the table
         var divContainer = document.getElementById("showAnimals");
-        divContainer.innerHTML = "<div class='text-part-main'> <h2>Results</h2> </div>";
+        divContainer.innerHTML = "";
+
+        if( results == true ) {
         divContainer.appendChild(table);
+        }
+        else {
+        divContainer.innerHTML = "<div class='text-part-main'> <h2>No matches found</h2> </div> <img src='img/adoptions.jpg'>";
+        }
       }
       </script>	
 
-      <div id="showAnimalDetails"></div>
+      <div id="adoptionForm"></div>
       </div>
       <div class="main">
-      <div id="showAnimals"></div>
+      <div id="showAnimals">
+      <img src="img/adoptions.jpg">
+      </div>
       </div>
     </div>
 
