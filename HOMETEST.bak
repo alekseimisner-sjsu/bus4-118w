@@ -13,7 +13,7 @@
         <ul class = "nav">
                 <li><a href = "HOMETEST.html">Home</a></li>
                 <li><a href = "about2.html">About</a></li>
-                <li><a href = "adopt.html">Adopt</a></li>
+                <li><a href = "animals.html">Animals</a></li>
                 <li><a href = "volunteer.html">Volunteer</a></li>
                 <li><a href = "faqs.html">FAQ</a></li>
                 <li><a href = "LostandFound.html">Lost and Found</a></li>
@@ -27,12 +27,6 @@
         </form>
         </div>
     </div>
-
-    <!-- the adopt.js script is used to create the adoption form when
-      someone clicks an "Adopt NAME" button. It needs a div called
-      adoptionForm on the page it is being used in -->
-      <script type="text/javascript" src="js/adopt.js"></script>
-
     <!-- Homebannerarea start -->
     <div class = "homebanner-area" id="home">
         <div class = "hometext-part">
@@ -53,7 +47,7 @@
                             <span class = "post">Dog</span>
                             <p> Scoopy is funny and ready for a new home!</p>
                         </div>
-                        <input type="button" class="featuredbutton" onclick="adoptAnimal('2','Snoopy')" value="Adopt Snoopy">
+                        <a href="animals.html"><button class = "featuredbutton">Adopt Snoopy</button></a>
                     </div>
                     <!-- Animal2 -->
                     <div class = "our-animal">
@@ -65,7 +59,7 @@
                             <span class = "post">Dog</span>
                             <p> Scooby is looking for a new Shaggy!</p>
                         </div>
-                        <input type="button" class="featuredbutton" onclick="adoptAnimal('4','Scooby')" value="Adopt Scooby">
+                        <a href="animals.html"><button class = "featuredbutton">Adopt Scooby</button></a>
                     </div>
                     <!-- Animal3 -->
                     <div class = "our-animal">
@@ -73,11 +67,11 @@
                             <img src = "img/6.jpg" alt="">
                         </div>
                         <div class = "team content">
-                            <h4 class = "title">Kitty White</h4>
+                            <h4 class = "title">Hello Kitty</h4>
                             <span class = "post">Cat</span>
                             <p> Ready to make your lives better!</p>
                         </div>
-                        <input type="button" class="featuredbutton" onclick="adoptAnimal('6','Kitty White')" value="Adopt Kitty White">
+                        <a href="animals.html"><button class = "featuredbutton">Adopt Hello Kitty</button></a>
                     </div>
         </div> 
         <!-- this is where the adoption form will go if someone clicks on
