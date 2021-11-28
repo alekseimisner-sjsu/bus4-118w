@@ -82,7 +82,7 @@
           </div>
         </div>
         <div>
-          <input type="button" onclick="displayAnimals()" value="Show Animals">
+          <input type="button" class='btn' onclick="displayAnimals()" value="Show Animals">
         </div>
       </fieldset>
       </form>
@@ -262,7 +262,7 @@
             var ID = myAnimals[i]['ID'];
             var Name = myAnimals[i]['Name'];
             var tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = "<h3>" + Name + "</h3>" + myAnimals[i]['Gender'] + "<br>" + myAnimals[i]['Breed'] + " " + myAnimals[i]['Type'] + "<br><br>" + myAnimals[i]['Description'] + "<br><br><input type='button' onclick=\"adoptAnimal('" + ID + "', '" + Name + "')\" value='Adopt " + Name + "'>";
+            tabCell.innerHTML = "<h3>" + Name + "</h3>" + myAnimals[i]['Gender'] + "<br>" + myAnimals[i]['Breed'] + " " + myAnimals[i]['Type'] + "<br><br>" + myAnimals[i]['Description'] + "<br><br><input type='button' class='btn' onclick=\"adoptAnimal('" + ID + "', '" + Name + "')\" value='Adopt " + Name + "'>";
           }
               
           // clear the area where we will show any search results 
