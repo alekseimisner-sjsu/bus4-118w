@@ -266,8 +266,12 @@
           }
               
           // clear the area where we will show any search results 
+          // and the adoption form area
           var divContainer = document.getElementById("showAnimals");
           divContainer.innerHTML = "";
+  
+          var adoptionContainer = document.getElementById("adoptionForm");
+          adoptionContainer.innerHTML = "";
 
           if( results == true ) {
             // add the table with the matching animals
