@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
+    <title>Thank you for your report</title>
+    <link rel="stylesheet" href = "css/STYLEMAIN.css">
 </head>
 <body>
-    <p>We have recieved your form and will contact you as soon as possible.</p>
+    <!-- Nav Bar -->
+    <div class ="navbar">
+        <a href = "HOMETEST.html" class="logo">FHFIP</a>
+        <ul class = "nav">
+            <li><a href = "HOMETEST.html">Home</a></li>
+            <li><a href = "about2.html">About</a></li>
+            <li><a href = "adopt.html">Adopt</a></li>
+            <li><a href = "volunteer.html">Volunteer</a></li>
+            <li><a href = "faqs.html">FAQ</a></li>
+            <li><a href = "LostandFound.html">Lost and Found</a></li>
+        </ul>
+    </div>
+    <div class="header">
+        <div class = "text-part">
+          <h1 id='thanks'></h1>
+        </div>
+    </div>
+    <div>
+        <p> We have received your form and will contact you as soon as possible.</p>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy;2021 FHFIP; designed by Khoi, Younis, Shiraaz, Aleksei</p>
+    </div>
+
+    <script>
+      var formValues = {}
+      location.search.substr(1).split("&").forEach(function(item) {
+        formValues[item.split("=")[0]] = item.split("=")[1]
+      })
+
+      var personName = formValues['firstname'].replaceAll('+',' ');
+
+      var thanksContainer = document.getElementById("thanks");
+      thanksContainer.innerHTML = "Thanks " + personName + "!";
+
+    </script>
+
 </body>
 </html>
+

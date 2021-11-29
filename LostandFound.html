@@ -21,6 +21,14 @@
     </ul>
   </div>
   
+
+  <!-- the firebase-lost.js script lets us push lost and found  
+    comments to a firebase database -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script src="js/firebase-lost.js"></script>
+ 
   <!-- Lost and Found Text Area -->
   <div class="header" id='volunteer'>
     <div class = "text-part">
@@ -56,22 +64,22 @@
       <div class="form-page">
         <div class="userform">
           <h2>Lost/Found Form</h2>
-          <form action="./lostandfounduser.html" method="POST">
+          <form action="./lostandfounduser.html" method="GET">
             <h4>First name:</h4>
-            <input type="text" name="realname">
+            <input type="text" id="firstname" name="firstname">
             <br>
             <h4>Last name:</h4>
-            <input type="text" name="realname">
+            <input type="text" id="lastname" name="lastname">
             <br>
             <h4>Email:</h4>
-            <input type="text" name="email">
+            <input type="text" id="email" name="email">
             <br>
-            <h4>Number:</h4>
-            <input type="text" name="phonenumber">
+            <h4>Phone Number:</h4>
+            <input type="text" id="phonenumber" name="phonenumber">
             <br>
             <h4>Description of Lost/Found Animal:</h4>
-            <textarea name="comments" rows="15" cols="96"></textarea><br><br>
-            <input type="submit" value="Submit">
+            <textarea id="comment" name="comment" rows="15" cols="96"></textarea><br><br>
+            <input type="submit" onclick=send() value="Submit">
           </form>
     </div>
   </div>
