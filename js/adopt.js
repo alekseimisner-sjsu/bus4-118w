@@ -17,21 +17,21 @@ function adoptAnimal(ID, Name) {
   divContainer.innerHTML += "<p>Thank you for your interest in adopting " + animalName + ". The adoption fee is $100.</p>" 
     divContainer.innerHTML += "<p>Please fill out the form below and we will get back to you regarding the next steps in the adoption process.</p><p><b>ALL FIELDS ARE REQUIRED.</b></p>";
   divContainer.innerHTML += "<form action='./adoptAnimal.html' method='GET'>" +
-    "<input type='hidden' name='animalID' value='" + animalID + "'>" +
-    "<input type='hidden' name='animalName' value='" + animalName + "'>" +
+    "<input type='hidden' id='animalID' name='animalID' value='" + animalID + "'>" +
+    "<input type='hidden' id='animalName' name='animalName' value='" + animalName + "'>" +
     "<h4>First name:</h4>" +
     "<input type='text' id='firstname' name='firstname' required>" +
     "<br>" +
     "<h4>Last name:</h4>" +
-    "<input type='text' name='lastname' required>" +
+    "<input type='text' id='lastname' name='lastname' required>" +
     "<br>" +
     "<h4>Email:</h4>" +
-    "<input type='text' name='email' required>" +
+    "<input type='text' id='email' name='email' required>" +
     "<br>" +
     "<h4>Phone number:</h4>" +
-    "<input type='text' name='phonenumber' required>" +
+    "<input type='text' id='phonenumber' name='phonenumber' required>" +
     "<br>" +
-    "<input type='submit' value='Submit'>" +
+    "<input type='submit' onclick='send()' value='Submit'>" +
     "</form>";
   document.getElementById('firstname').focus();
 }
