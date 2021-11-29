@@ -13,7 +13,7 @@ function adoptAnimal(ID, Name) {
   var divContainer = document.getElementById("adoptionForm");
   divContainer.innerHTML = "";
   divContainer.innerHTML = "<h3>Adopting " + animalName + "</h3>";
-  divContainer.innerHTML += "<img src='img/";
+  divContainer.innerHTML += "<img border=2 src='./img/" + animalID + ".jpg'>";
   divContainer.innerHTML += "<p>Thank you for your interest in adopting " + animalName + ". The adoption fee is $100.</p>" 
     divContainer.innerHTML += "<p>Please fill out the form below and we will get back to you regarding the next steps in the adoption process.</p><p><b>ALL FIELDS ARE REQUIRED.</b></p>";
   divContainer.innerHTML += "<form action='./adoptAnimal.html' method='GET'>" +

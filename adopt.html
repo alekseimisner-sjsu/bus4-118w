@@ -131,46 +131,44 @@
           var otherCheckbox = document.querySelector('input[value="other"]');
 
           var myAnimals=getAnimals();
-          for (var i = 0; i < myAnimals.length; i++) {
+          for (var i = 0;i < myAnimals.length;i++) {
             // the rows of JSON data about the animals
-            for (var i = 0;i < myAnimals.length;i++) {
 
-              // We force the animal type in our list of animals up for 
-              // adoption to lowercase because people at the adoption agency 
-              // might enter that information with various combinations
-              // of upper and lower case letters. If the animal type for the 
-              // current row is of a type that is NOT checked, go to the next 
-              // row (i.e. skip it)
-              if( myAnimals[i]['Type'].toLowerCase() == 'cat' ) { 
-                if(! catsCheckbox.checked) {
-                  continue;
-                }
+            // We force the animal type in our list of animals up for 
+            // adoption to lowercase because people at the adoption agency 
+            // might enter that information with various combinations
+            // of upper and lower case letters. If the animal type for the 
+            // current row is of a type that is NOT checked, go to the next 
+            // row (i.e. skip it)
+            if( myAnimals[i]['Type'].toLowerCase() == 'cat' ) { 
+              if(! catsCheckbox.checked) {
+                continue;
               }
-              else if( myAnimals[i]['Type'].toLowerCase() == 'dog' ) { 
-                if(! dogsCheckbox.checked) {
-                  continue;
-                }
+            }
+            else if( myAnimals[i]['Type'].toLowerCase() == 'dog' ) { 
+              if(! dogsCheckbox.checked) {
+                continue;
               }
-              else {
-                if(! otherCheckbox.checked) { 
-                  continue;
-                }
-              }
-
-              // if we got this far, it means the animal type for the row 
-              // matches a checked Type checkbox, so we can now add its breed 
-              // to the list we are returning if it isn't in the list already.
-              var breed = myAnimals[i]['Breed'].toLowerCase();
-              if (!(breed in breedLookup)) {
-                breedLookup[breed] = 1;
-                breedResults.push(breed);
+            }
+            else {
+              if(! otherCheckbox.checked) { 
+                continue;
               }
             }
 
-            // return the list of unique breeds for the animals that match 
-            // the checked animal Types
-            return breedResults.sort();
+            // if we got this far, it means the animal type for the row 
+            // matches a checked Type checkbox, so we can now add its breed 
+            // to the list we are returning if it isn't in the list already.
+            var breed = myAnimals[i]['Breed'].toLowerCase();
+            if (!(breed in breedLookup)) {
+              breedLookup[breed] = 1;
+              breedResults.push(breed);
+            }
           }
+
+          // return the list of unique breeds for the animals that match 
+          // the checked animal Types
+          return breedResults.sort();
         }
 
         // displayAnimals filters the animal list based on the animal
