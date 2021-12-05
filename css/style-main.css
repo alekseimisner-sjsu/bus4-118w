@@ -137,6 +137,8 @@ ul li{
     color: white;
     cursor: pointer;
     transition: all 0.3s linear;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 .btn:hover,
 .btn:focus{
@@ -184,7 +186,7 @@ ul li{
 /* Start About CSS */
 .about-area{
     position: relative;
-    background-image: url(about\ us\ background\ photo.jpg);
+    background-image: url(../img/about-us-background.jpg);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: contain;
@@ -376,20 +378,19 @@ legend {
 /* Start of Lost and Found CSS */
 .center {
     margin: auto;
-    width: 100%;
+    width: 80%;
     /* border: 3px solid #d67c15; */
     height: 100%;
     text-align: center;
 }
 
-
-/* .lostandfound-area {
-    background-image: url(background\for\lost\and\found.jpg);
-    height: 500px; 
+/*
+.lostandfound-area {
+    background-image: url(../img/lost-and-found-background.jpg);
+    background-repeat: repeat-y;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative; 
+    background-clip: border-box;
 } */
 .form-page{
   text-align: center;

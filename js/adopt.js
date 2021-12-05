@@ -26,12 +26,12 @@ function adoptAnimal(ID, Name) {
     "<input type='text' id='lastname' name='lastname' required>" +
     "<br>" +
     "<h4>Email:</h4>" +
-    "<input type='text' id='email' name='email' required>" +
+    "<input type='email' id='email' name='email' required>" +
     "<br>" +
     "<h4>Phone number:</h4>" +
-    "<input type='text' id='phonenumber' name='phonenumber' required>" +
+    "<input type='tel' id='phonenumber' name='phonenumber' required>" +
     "<br>" +
-    "<input type='submit' onclick='send()' value='Submit'>" +
+    "<input type='submit' class='btn' onclick='send()' value='Submit'>" +
     "</form>";
   document.getElementById('firstname').focus();
 }
